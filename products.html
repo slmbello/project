@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products – SLM INC.</title>
+
+    <link rel="stylesheet" href="products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">SLM INC.</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <button class="account-btn">Create Account</button>
+    </nav>
+</header>
+
+<section class="products-page">
+
+    <h2 class="page-title">Available Furniture</h2>
+
+    <!-- SEARCH BAR -->
+    <div class="search-row">
+        <input type="text" id="searchInput" placeholder="Search For Available Furniture">
+        <button class="search-btn">Search</button>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="filter-row">
+        <button class="filter active" data-filter="all">ALL</button>
+        <button class="filter" data-filter="bed">Beds</button>
+        <button class="filter" data-filter="chair">Chairs</button>
+        <button class="filter" data-filter="light">Lights</button>
+        <button class="filter" data-filter="sofa">Sofa</button>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="product-grid" id="productGrid">
+
+        <div class="product-card" data-id="chair-modern" data-category="chair">
+            <img src="images/chair-modern.jpg">
+            <h4>Stylish Chair</h4>
+            <p class="price">$45.00 <span>$55.00</span></p>
+        </div>
+
+        <div class="product-card" data-id="lamp-modern" data-category="light">
+            <img src="images/lamp-modern.jpg">
+            <h4>Lamp Tool</h4>
+            <p class="price">$56.00 <span>$65.00</span></p>
+        </div>
+
+        <div class="product-card" data-id="chair-yellow" data-category="chair">
+            <img src="images/chair-yellow.jpg">
+            <h4>Vintage Chair</h4>
+            <p class="price">$85.00 <span>$95.00</span></p>
+        </div>
+
+        <div class="product-card" data-id="lamp-modern" data-category="light">
+            <img src="images/lamp-modern.jpg">
+            <h4>Hand Base Lamp</h4>
+            <p class="price">$36.00 <span>$40.00</span></p>
+        </div>
+
+        <div class="product-card" data-id="sofa-leather" data-category="sofa">
+            <img src="images/sofa-leather.jpg">
+            <h4>Stackable Chair</h4>
+            <p class="price">$87.00 <span>$97.00</span></p>
+        </div>
+
+        <div class="product-card" data-id="lamp-modern" data-category="light">
+            <img src="images/lamp-modern.jpg">
+            <h4>Artende Lamp</h4>
+            <p class="price">$46.00 <span>$56.00</span></p>
+        </div>
+
+        <div class="product-card" data-id="sofa-brown" data-category="sofa">
+            <img src="images/sofa-brown.jpg">
+            <h4>Unique Sofa</h4>
+            <p class="price">$350.00 <span>$400.00</span></p>
+        </div>
+
+        <div class="product-card" data-id="table-wood" data-category="bed">
+            <img src="images/table-wood.jpg">
+            <h4>Double Bed</h4>
+            <p class="price">$450.00 <span>$500.00</span></p>
+        </div>
+
+        <div class="product-card" data-id="sofa-brown" data-category="sofa">
+            <img src="images/sofa-brown.jpg">
+            <h4>Indivi Sofa</h4>
+            <p class="price">$450.00 <span>$500.00</span></p>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="products.js"></script>
+
+</body>
+</html>

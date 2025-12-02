@@ -1,0 +1,241 @@
+/* ============================================
+   PRODUCT.CSS — CLEAN MODERN PRODUCT PAGE
+============================================ */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 22px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar nav a {
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #444;
+}
+
+.navbar nav a.active {
+    color: #144734;
+}
+
+/* MAIN PRODUCT SECTION */
+.product-main {
+    width: 100%;
+    padding: 130px 10% 60px;
+    display: flex;
+    gap: 50px;
+}
+
+/* LEFT — IMAGES */
+.product-images {
+    width: 50%;
+}
+
+.main-image {
+    width: 100%;
+    height: 430px;
+    border-radius: 14px;
+    object-fit: cover;
+    background: #f7f7f7;
+}
+
+/* THUMBNAILS */
+.thumb-row {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.thumb {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: .65;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.thumb:hover,
+.active-thumb {
+    opacity: 1;
+    transform: scale(1.06);
+}
+
+/* RIGHT — DETAILS */
+.product-details.glass-box {
+    width: 50%;
+    padding: 35px;
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.18);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.36);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+#productTitle {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.price span {
+    margin-left: 6px;
+    font-size: 13px;
+    color: #777;
+    text-decoration: line-through;
+}
+
+.desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    margin-top: 10px;
+}
+
+/* QUANTITY CONTROL */
+.qty-box {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.qty-box button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #144734;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.qty-box button:hover {
+    background: #0d3424;
+}
+
+#qty {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* MORE PRODUCTS */
+.more-products {
+    padding: 40px 10%;
+}
+
+.more-products h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.more-products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.more-products-grid .product-card {
+    width: 220px;
+    padding: 15px;
+    border-radius: 14px;
+    background: white;
+    border: 1px solid #e3e3e3;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.more-products-grid .product-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.more-products-grid .product-card h3 {
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.more-products-grid .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .product-main {
+        flex-direction: column;
+    }
+    .product-images, 
+    .product-details {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .thumb {
+        width: 70px;
+        height: 70px;
+    }
+    .main-image {
+        height: 280px;
+    }
+    .more-products-grid {
+        justify-content: center;
+    }
+}
+/* Make all sections adapt spacing */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    section,
+    .hero,
+    .products-section,
+    .about-section,
+    .contact-container,
+    .product-main {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+}
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:24px;
+  color:var(--muted);
+  margin-top:40px;
+  font-size:14px;
+}

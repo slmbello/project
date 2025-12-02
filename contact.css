@@ -1,0 +1,126 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    padding: 22px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar nav a {
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #444;
+}
+
+/* CONTACT PAGE */
+.contact-container {
+    padding: 150px 10% 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-box {
+    width: 60%;
+    padding: 40px;
+
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(22px);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.35);
+}
+
+.contact-box h1 {
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.contact-form {
+    margin-top: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.65);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #144734;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+@media (max-width: 900px) {
+    .contact-box {
+        width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-box {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px;
+    }
+}
+
+
+/* Make all sections adapt spacing */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    section,
+    .hero,
+    .products-section,
+    .about-section,
+    .contact-container,
+    .product-main {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+}
+
+
+
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:24px;
+  color:var(--muted);
+  margin-top:40px;
+  font-size:14px;
+}

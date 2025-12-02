@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details – SLM INC.</title>
+
+    <link rel="stylesheet" href="product.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">SLM.INC</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- PRODUCT DETAILS SECTION -->
+<section class="product-main">
+
+    <!-- LEFT SIDE: IMAGES -->
+    <div class="product-images">
+        <img id="mainImg" class="main-image" src="">
+        <div class="thumb-row"></div>
+    </div>
+
+    <!-- RIGHT SIDE: DETAILS -->
+    <div class="product-details glass-box">
+
+        <h1 id="productTitle"></h1>
+
+        <p id="productPrice" class="price"></p>
+
+        <p id="productDesc" class="desc"></p>
+
+        <div class="qty-box">
+            <button onclick="changeQty(-1)">−</button>
+            <span id="qty">1</span>
+            <button onclick="changeQty(1)">+</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MORE PRODUCTS SECTION -->
+<section class="more-products">
+    <h2>You May Also Like</h2>
+
+    <div class="more-products-grid">
+
+        <div class="product-card" data-id="chair-modern">
+            <img src="images/chair-modern.jpg">
+            <h3>Modern Curved Chair</h3>
+        </div>
+
+        <div class="product-card" data-id="chair-yellow">
+            <img src="images/chair-yellow.jpg">
+            <h3>Yellow Lounge Chair</h3>
+        </div>
+
+        <div class="product-card" data-id="lamp-modern">
+            <img src="images/lamp-modern.jpg">
+            <h3>Modern Table Lamp</h3>
+        </div>
+
+        <div class="product-card" data-id="sofa-brown">
+            <img src="images/sofa-brown.jpg">
+            <h3>Brown Minimalist Sofa</h3>
+        </div>
+
+        <div class="product-card" data-id="sofa-leather">
+            <img src="images/sofa-leather.jpg">
+            <h3>Premium Leather Sofa</h3>
+        </div>
+
+        <div class="product-card" data-id="table-wood">
+            <img src="images/table-wood.jpg">
+            <h3>Wooden Dining Table</h3>
+        </div>
+
+    </div>
+</section>
+
+<script src="product.js"></script>
+<footer>
+  © 2025 SLM.INC — All Rights Reserved
+</footer>
+</body>
+</html>
