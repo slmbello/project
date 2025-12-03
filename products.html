@@ -1,17 +1,24 @@
+<!--PRODUCTS.HTML — Main Product Listing Page Displays search bar, filters, and product grid linking to product details -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+
+    <!-- Ensures proper display on all device sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Products – SLM INC.</title>
 
+    <!-- Styles for this page -->
     <link rel="stylesheet" href="products.css">
+
+    <!-- Site font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR — Sticky top navigation -->
 <header class="navbar">
     <div class="logo">SLM INC.</div>
 
@@ -19,11 +26,14 @@
         <a href="index.html">Home</a>
         <a class="active" href="products.html">Products</a>
         <a href="contact.html">Contact</a>
+        <button class="account-btn">Create Account</button>
     </nav>
 </header>
 
+<!-- PAGE CONTENT WRAPPER -->
 <section class="products-page">
 
+    <!-- Page heading -->
     <h2 class="page-title">Available Furniture</h2>
 
     <!-- SEARCH BAR -->
@@ -32,7 +42,7 @@
         <button class="search-btn">Search</button>
     </div>
 
-    <!-- FILTER TABS -->
+    <!--FILTER BUTTONS -->
     <div class="filter-row">
         <button class="filter active" data-filter="all">ALL</button>
         <button class="filter" data-filter="bed">Beds</button>
@@ -41,9 +51,10 @@
         <button class="filter" data-filter="sofa">Sofa</button>
     </div>
 
-    <!-- PRODUCT GRID -->
+    <!-- PRODUCT GRID Each card links to product.html via JS -->
     <div class="product-grid" id="productGrid">
 
+        <!-- Single card template format -->
         <div class="product-card" data-id="chair-modern" data-category="chair">
             <img src="images/chair-modern.jpg">
             <h4>Stylish Chair</h4>
@@ -102,6 +113,7 @@
 
 </section>
 
+<!-- JS file controlling search + filters + product navigation -->
 <script src="products.js"></script>
 
 </body>
