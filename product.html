@@ -1,19 +1,27 @@
+<!-- PRODUCT.HTML — Dynamic Product Details Page Loads product data based on URL "?id=product-id" -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+
+    <!-- Ensures perfect mobile scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Product Details – SLM INC.</title>
 
-    <link rel="stylesheet" href="product.css" />
+    <!-- CSS for the product page -->
+    <link rel="stylesheet" href="product.css">
+
+    <!-- Google font used across the website -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR — Stays on top when scrolling-->
 <header class="navbar">
     <div class="logo">SLM.INC</div>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
@@ -21,24 +29,30 @@
     </nav>
 </header>
 
-<!-- PRODUCT DETAILS SECTION -->
+<!-- MAIN PRODUCT SECTION — Images + Description + Quantity -->
 <section class="product-main">
 
-    <!-- LEFT SIDE: IMAGES -->
+    <!-- LEFT SIDE: Image Gallery -->
     <div class="product-images">
+
+        <!-- Main large image (updated dynamically via JS) -->
         <img id="mainImg" class="main-image" src="">
+
+        <!-- Thumbnails appended here by JS -->
         <div class="thumb-row"></div>
     </div>
 
-    <!-- RIGHT SIDE: DETAILS -->
+    <!-- RIGHT SIDE: Product Details -->
     <div class="product-details glass-box">
 
+        <!-- Title, price and description are injected by JS -->
         <h1 id="productTitle"></h1>
 
         <p id="productPrice" class="price"></p>
 
         <p id="productDesc" class="desc"></p>
 
+        <!-- Quantity selector -->
         <div class="qty-box">
             <button onclick="changeQty(-1)">−</button>
             <span id="qty">1</span>
@@ -49,12 +63,13 @@
 
 </section>
 
-<!-- MORE PRODUCTS SECTION -->
+<!--  "MORE PRODUCTS" SECTION — Suggested items -->
 <section class="more-products">
     <h2>You May Also Like</h2>
 
     <div class="more-products-grid">
 
+        <!-- These link to other product detail pages through JS click -->
         <div class="product-card" data-id="chair-modern">
             <img src="images/chair-modern.jpg">
             <h3>Modern Curved Chair</h3>
@@ -88,9 +103,12 @@
     </div>
 </section>
 
+<!-- Product page functionality -->
 <script src="product.js"></script>
+
 <footer>
   © 2025 SLM.INC — All Rights Reserved
 </footer>
+
 </body>
 </html>
