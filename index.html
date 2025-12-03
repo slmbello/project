@@ -1,19 +1,27 @@
+<!-- INDEX.HTML — Main Homepage for SLM INC Furniture WebsiteContains navbar, hero banner, product preview grid and about section -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- Ensures perfect scaling on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SLM INC — Furniture Store</title>
 
+    <!-- Homepage styles -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts for site-wide typography -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- NAVBAR — Sticky transparent top navigation -->
     <header class="navbar">
         <div class="logo">SLM INC.</div>
+
         <nav>
             <a href="#" class="active">Home</a>
             <a href="products.html">Products</a>
@@ -21,12 +29,17 @@
         </nav>
     </header>
 
-    <!-- HERO -->
+    <!-- HERO SECTION — Landing banner with overlay text and search bar -->
     <section class="hero">
         <div class="hero-overlay">
-            <h1>We Help You<br>Make Modern<br>Furniture</h1>
-            <p>Elegant and luxurious designs handcrafted by the best furniture makers.</p>
 
+            <h1>We Help You<br>Make Modern<br>Furniture</h1>
+
+            <p>
+                Elegant and luxurious designs handcrafted by the best furniture makers.
+            </p>
+
+            <!-- Search box (JS filters products on homepage) -->
             <div class="search-box">
                 <input type="text" placeholder="Search furniture…">
                 <button>🔍</button>
@@ -34,10 +47,11 @@
         </div>
     </section>
 
-    <!-- PRODUCTS -->
-    <section class="products-section" id="products" >
+    <!-- FEATURED PRODUCTS — Preview before going to products page -->
+    <section class="products-section" id="products">
         <h2 class="section-title">Our Products</h2>
 
+        <!-- Product preview grid (each card is clickable via script.js) -->
         <div class="product-grid">
 
             <div class="product-card" data-id="chair-modern">
@@ -79,7 +93,7 @@
         </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT SECTION — Company description -->
     <section class="about-section">
         <div class="about-container">
             <h2>About Us</h2>
@@ -91,9 +105,12 @@
         </div>
     </section>
 
+    <!-- Homepage scripts (handles search + product click) -->
     <script src="script.js"></script>
+
     <footer>
-  © 2025 SLM.INC — All Rights Reserved
-</footer>
+      © 2025 SLM.INC — All Rights Reserved
+    </footer>
+
 </body>
 </html>
