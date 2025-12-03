@@ -1,23 +1,25 @@
+/* CONTACT.CSS — Complete styles for the Contact PageIncludes global styling, navbar, form UI, and mobile scaling*/
+
+/* Base layout and general page design */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #f7f7f7;
+    font-family: 'Poppins', sans-serif; /* Clean modern font used site-wide */
+    background: #f7f7f7;                /* Light background for soft contrast */
     margin: 0;
 }
 
-/* NAVBAR */
-
+/* NAVIGATION BAR Always visible at top */
 .navbar {
     width: 100%;
-    padding: 22px 10%;
+    padding: 22px 10%;                 /* Wide spacing for large screens */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.95); /* Light glass effect */
+    backdrop-filter: blur(10px);        /* Frosted blur background */
     border-bottom: 1px solid #eee;
-    position: sticky;
+    position: sticky;                   /* Makes the navbar stay on scroll */
     top: 0;
-    z-index: 1000;
+    z-index: 1000;                      /* Ensures it stays above all content */
 }
 
 .navbar nav a {
@@ -25,22 +27,23 @@ body {
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
-    color: #444;
+    color: #444;                        /* Neutral text color */
 }
 
-/* CONTACT PAGE */
+/* CONTACT PAGE LAYOUT */
 .contact-container {
-    padding: 150px 10% 50px;
+    padding: 150px 10% 50px;            /* Top spacing prevents overlap */
     display: flex;
     justify-content: center;
 }
 
+/* Glass-style card for contact details */
 .contact-box {
     width: 60%;
     padding: 40px;
 
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(22px);
+    background: rgba(255,255,255,0.2);  /* Transparent white glass */
+    backdrop-filter: blur(22px);        /* Strong background blur */
     border-radius: 15px;
     border: 1px solid rgba(255,255,255,0.35);
 }
@@ -54,10 +57,12 @@ body {
     font-size: 15px;
 }
 
+/* CONTACT FORM  */
 .contact-form {
     margin-top: 25px;
 }
 
+/* Text inputs and textarea */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -65,38 +70,43 @@ body {
     border: none;
     border-radius: 8px;
     margin-bottom: 15px;
-    background: rgba(255,255,255,0.65);
+    background: rgba(255,255,255,0.65); /* Keeps the glass UI consistent */
 }
 
+/* Submit button styling */
 .contact-form button {
     width: 100%;
     padding: 12px;
     border: none;
-    background: #144734;
+    background: #144734;                /* Brand primary color */
     color: white;
     border-radius: 8px;
-    cursor: pointer;
+    cursor: pointer;                    /* Shows interactivity */
 }
+
+/* RESPONSIVE DESIGN */
+
+/* Medium screens */
 @media (max-width: 900px) {
     .contact-box {
         width: 80%;
     }
 }
 
+/* Mobile screens */
 @media (max-width: 600px) {
     .contact-box {
         width: 95%;
-        padding: 25px;
+        padding: 25px;                   /* Reduced padding for small screens */
     }
 
     .contact-form input,
     .contact-form textarea {
-        font-size: 14px;
+        font-size: 14px;                 /* Prevents input overflow */
     }
 }
 
-
-/* Make all sections adapt spacing */
+/* Global spacing fix across ALL pages when screen becomes narrow */
 @media (max-width: 768px) {
     .navbar {
         padding: 16px 5%;
@@ -113,14 +123,11 @@ body {
     }
 }
 
-
-
-
-/* FOOTER */
+/*FOOTER */
 footer {
-  text-align:center;
-  padding:24px;
-  color:var(--muted);
-  margin-top:40px;
-  font-size:14px;
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+  margin-top: 40px;
+  font-size: 14px;
 }
