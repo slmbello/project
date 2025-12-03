@@ -1,3 +1,6 @@
+/* PRODUCTS.CSS — Styling for the main product listing page Includes search bar, filters, product grid, navbar & responsive layout*/
+
+/* Reset for consistent spacing across all elements */
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +8,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* NAVBAR */
+/* NAVBAR — Clean white sticky top bar */
 .navbar {
     width: 100%;
     padding: 20px 10%;
@@ -27,9 +30,10 @@
 }
 
 .navbar nav a.active {
-    color: #000;
+    color: #000; /* Highlights active page */
 }
 
+/* "Create Account" button */
 .account-btn {
     padding: 10px 16px;
     background: #144734;
@@ -38,7 +42,7 @@
     border-radius: 6px;
 }
 
-/* PAGE */
+/* PAGE WRAPPER */
 .products-page {
     padding: 40px 10%;
 }
@@ -70,7 +74,7 @@
     border-radius: 6px;
 }
 
-/* FILTER ROW */
+/* FILTER BUTTONS */
 .filter-row {
     display: flex;
     gap: 15px;
@@ -90,13 +94,14 @@
     color: white;
 }
 
-/* PRODUCT GRID */
+/* PRODUCT GRID (Auto-fill) */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 30px;
 }
 
+/* Each product item */
 .product-card {
     background: white;
     border: 1px solid #e5e5e5;
@@ -111,6 +116,7 @@
     box-shadow: 0px 12px 25px rgba(0,0,0,0.08);
 }
 
+/* Product images */
 .product-card img {
     width: 100%;
     height: 200px;
@@ -135,17 +141,18 @@
     margin-left: 6px;
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE LAYOUT */
 @media (max-width: 600px) {
     .search-row {
         flex-direction: column;
     }
 
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
     }
 }
-/* Make all sections adapt spacing */
+
+/* Global spacing fix */
 @media (max-width: 768px) {
     .navbar {
         padding: 16px 5%;
