@@ -1,46 +1,65 @@
+<!--Contact Page StructureDisplays company contact info + form inside a glass UI box -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact – SLM INC.</title>
+    <meta charset="UTF-8">
 
-<link rel="stylesheet" href="contact.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Ensures proper scaling on all screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Contact – SLM INC.</title>
+
+    <!-- Contact page stylesheet -->
+    <link rel="stylesheet" href="contact.css">
+
+    <!-- Google Fonts for consistent typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+<!--NAVIGATION BAR  -->
 <header class="navbar">
     <div class="logo">SLM INC.</div>
+
     <nav>
+        <!-- Navigation links to other pages -->
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
+
+        <!-- Active page indicator -->
         <a href="#" class="active">Contact</a>
     </nav>
 </header>
 
+<!-- MAIN CONTACT SECTION  -->
 <section class="contact-container">
 
     <div class="contact-box glass">
         <h1>Contact Us</h1>
 
+        <!-- Static contact details -->
         <p><strong>Email:</strong> abdulsalam.toyo@gmail.com</p>
         <p><strong>Instagram:</strong> @slmbello.exe</p>
         <p><strong>Twitter:</strong> @slm_bello</p>
 
+        <!-- Contact form  -->
         <form class="contact-form">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Message" required></textarea>
 
+            <!-- Submit button -->
             <button>Send Message</button>
         </form>
     </div>
 
 </section>
+
+<!--FOOTER-->
 <footer>
   © 2025 SLM.INC — All Rights Reserved
 </footer>
+
 </body>
 </html>
