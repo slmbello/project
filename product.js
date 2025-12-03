@@ -1,4 +1,6 @@
-//  PRODUCT DATA
+/* PRODUCT.JS — Dynamic product loader for product.html Loads title, description, images, gallery thumbnails & quantity selection */
+
+/* PRODUCT DATABASE — All product info is stored here */
 const PRODUCTS = {
     "chair-modern": {
         title: "Modern Curved Chair",
@@ -73,63 +75,73 @@ const PRODUCTS = {
     }
 };
 
-/* GET PRODUCT ID FROM URL */
+/* GET PRODUCT ID FROM URL (example: product.html?id=chair-modern)*/
 const params = new URLSearchParams(window.location.search);
 let id = params.get("id");
 
-// If the user opens product.html manually → fallback
+/* Fallback: if someone opens product.html with no id */
 if (!id || !PRODUCTS[id]) {
     id = "chair-modern";
 }
 
 let product = PRODUCTS[id];
 
-/* UPDATE PAGE CONTENT */
+/* UPDATE PAGE CONTENT WITH PRODUCT DATA */
 
-// Title
+// Update title
 document.getElementById("productTitle").textContent = product.title;
 
-// Price
+// Update price (old price shows crossed out)
 document.getElementById("productPrice").innerHTML =
     `$${product.price}.00 <span>$${product.oldPrice}.00</span>`;
 
-// Description
+// Update description
 document.getElementById("productDesc").textContent = product.desc;
 
-// Main image
+// Set main image
 const mainImg = document.getElementById("mainImg");
 mainImg.src = product.images[0];
 
-/* ============================================
-   THUMBNAIL GALLERY
-============================================ */
+/* THUMBNAIL IMAGE GALLERY — Click a thumbnail to update main image */
 const thumbRow = document.querySelector(".thumb-row");
-thumbRow.innerHTML = "";
+thumbRow.innerHTML = ""; // Clear previous thumbs when switching product
 
 product.images.forEach((img, index) => {
+
     const t = document.createElement("img");
     t.src = img;
     t.classList.add("thumb");
+
+    // First image is active by default
     if (index === 0) t.classList.add("active-thumb");
 
+    // When clicking a thumbnail → change the main image
     t.onclick = () => {
         mainImg.src = img;
-        document.querySelectorAll(".thumb").forEach(a => a.classList.remove("active-thumb"));
+
+        // Remove highlight from other thumbnails
+        document.querySelectorAll(".thumb")
+            .forEach(a => a.classList.remove("active-thumb"));
+
         t.classList.add("active-thumb");
     };
 
     thumbRow.appendChild(t);
 });
 
-/*MORE*/
+/* QUANTITY SELECTOR — Simple + and - buttons */
 let qty = 1;
+
 function changeQty(n) {
     qty += n;
+
+    // Prevent quantity from going below 1
     if (qty < 1) qty = 1;
+
     document.getElementById("qty").textContent = qty;
 }
 
-/* MORE PRODUCTS — CLICK TO LOAD */
+/* MORE PRODUCTS — Clicking another item loads its details */
 document.querySelectorAll(".more-products-grid .product-card").forEach(card => {
     card.onclick = () => {
         const pid = card.dataset.id;
