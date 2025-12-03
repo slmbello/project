@@ -1,3 +1,4 @@
+/* GLOBAL RESET Ensures consistent spacing and font across all elements */
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +6,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* NAVBAR */
+/* NAVBAR — Fixed glass navigation bar Stays at the top while strolling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 22px 10%;
-    position: fixed;
+    position: fixed;                   /* Keeps navbar visible */
     width: 100%;
-    backdrop-filter: blur(20px);
-    background: rgba(255,255,255,0.25);
-    z-index: 999;
+    backdrop-filter: blur(20px);       /* Glass blur effect */
+    background: rgba(255,255,255,0.25);/* Transparent background */
+    z-index: 999;                      /* Places navbar above everything */
 }
 
 .navbar nav a {
@@ -25,15 +26,16 @@
     font-weight: 500;
 }
 
+/* Highlights the active page link */
 .navbar nav a.active {
     color: black;
     font-weight: 600;
 }
 
-/* HERO */
+/* HERO SECTION — Main landing banner */
 .hero {
     height: 95vh;
-    background-image: url('images/blur.jpg');
+    background-image: url('images/blur.jpg'); /* Homepage background */
     background-size: cover;
     background-position: center;
     display: flex;
@@ -41,11 +43,11 @@
     padding: 0 10%;
 }
 
+/* Glass card overlay inside hero */
 .hero-overlay {
     width: 45%;
     padding: 40px;
     border-radius: 20px;
-
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(25px);
     border: 1px solid rgba(255,255,255,0.35);
@@ -63,11 +65,13 @@
     opacity: 0.8;
 }
 
+/* HERO SEARCH BAR */
 .search-box {
     margin-top: 20px;
     display: flex;
 }
 
+/* Search input field */
 .search-box input {
     flex: 1;
     padding: 12px;
@@ -76,6 +80,7 @@
     outline: none;
 }
 
+/* Search button */
 .search-box button {
     padding: 12px 20px;
     border: none;
@@ -85,7 +90,7 @@
     cursor: pointer;
 }
 
-/* PRODUCTS */
+/* PRODUCTS SECTION — Grid layout for product cards */
 .products-section {
     padding: 60px 10%;
 }
@@ -96,12 +101,14 @@
     margin-bottom: 40px;
 }
 
+/* Responsive product card grid */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
     gap: 25px;
 }
 
+/* Single product card in a glass style */
 .product-card {
     background: rgba(255,255,255,0.2);
     border-radius: 14px;
@@ -113,10 +120,12 @@
     transition: 0.3s;
 }
 
+/* Hover animation */
 .product-card:hover {
     transform: translateY(-5px);
 }
 
+/* Product image */
 .product-card img {
     width: 100%;
     height: 180px;
@@ -124,18 +133,20 @@
     object-fit: cover;
 }
 
+/* Price styling */
 .price {
     margin-top: 5px;
     font-weight: 600;
 }
 
+/* Old price (strikethrough) */
 .price span {
     margin-left: 4px;
     color: #888;
     text-decoration: line-through;
 }
 
-/* Make all sections adapt spacing */
+/* UNIVERSAL RESPONSIVE SPACING PATCH Ensures all sections shrink nicely on smaller screens */
 @media (max-width: 768px) {
     .navbar {
         padding: 16px 5%;
@@ -151,10 +162,11 @@
         padding-right: 5% !important;
     }
 }
-/* ABOUT */
+
+/* ABOUT SECTION — Company description blocs */
 .about-section {
     padding: 80px 10%;
-    background:#f2f2f2;
+    background: #f2f2f2;
 }
 
 .about-section h2 {
@@ -162,17 +174,19 @@
     margin-bottom: 15px;
 }
 
+/* Paragraph inside about section */
 .about-section p {
     width: 70%;
     font-size: 14px;
     line-height: 1.7;
     color: #444;
 }
-/* FOOTER */
+
+/* FOOTER — Bottom of page */
 footer {
-  text-align:center;
-  padding:24px;
-  color:var(--muted);
-  margin-top:40px;
-  font-size:14px;
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+  margin-top: 40px;
+  font-size: 14px;
 }
